@@ -1,11 +1,12 @@
 """
 Crime Bot - Main Entry Point
-Initial validation and hook generation test.
+Hook and Setup generation test.
 """
 
 from app.database.story_loader import StoryLoader
 from app.database.case_validator import CaseValidator
 from app.scripting.hook_builder import HookBuilder
+from app.scripting.setup_builder import SetupBuilder
 
 
 def main():
@@ -27,8 +28,15 @@ def main():
 
             # Build Hook
             hook = HookBuilder.build(case)
-            print("\n🎬 Generated Hook:")
+
+            # Build Setup
+            setup = SetupBuilder.build(case)
+
+            print("\n🎬 Generated Script Blocks:\n")
+            print("HOOK:")
             print(hook)
+            print("\nSETUP:")
+            print(setup)
 
         except ValueError as e:
             print(f"❌ Case {case.get('case_id')} failed validation: {e}")

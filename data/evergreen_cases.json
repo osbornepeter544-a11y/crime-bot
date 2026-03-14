@@ -1,32 +1,70 @@
 {
   "cases": [
     {
-      "case_id": "CB000",
-      "title": "TEMPLATE CASE - STRUCTURE TEST ONLY",
-      "year": 1900,
-      "location": "N/A",
-      "category": "Template",
-      "evergreen_score": 0,
+      "case_id": "CB001",
+      "title": "The Disappearance of Amelia Earhart",
+      "year": 1937,
+      "location": "Pacific Ocean",
+      "category": "Missing Person",
+      "evergreen_score": 9,
 
-      "summary": "This is a placeholder template used only for structural testing of the Crime Bot database schema.",
-      "key_events": [],
-      "unresolved_elements": [],
-      "known_theories": [],
+      "summary": "Amelia Earhart, a pioneering aviator, disappeared while attempting to circumnavigate the globe in 1937. During the final leg of her journey over the Pacific Ocean, communication with her aircraft was lost, and neither she nor her navigator were ever found.",
 
-      "hook_angle_options": [],
+      "key_events": [
+        "Earhart departed Lae, New Guinea on July 2, 1937.",
+        "Radio contact became intermittent during flight.",
+        "The U.S. Navy launched an extensive search operation.",
+        "No confirmed wreckage was ever recovered."
+      ],
+
+      "unresolved_elements": [
+        "The exact location of her aircraft remains unknown.",
+        "Conflicting radio signal reports after disappearance.",
+        "No physical evidence conclusively confirms crash site."
+      ],
+
+      "known_theories": [
+        "She ran out of fuel and crashed into the ocean.",
+        "She landed on an uninhabited island.",
+        "She was captured by Japanese forces."
+      ],
+
+      "hook_angle_options": [
+        "She vanished over the Pacific and was never seen again.",
+        "One of the most famous pilots in history disappeared mid-flight.",
+        "How does a plane vanish without a trace?"
+      ],
+
       "emotional_tone": "calm_mysterious",
-      "tension_points": [],
-      "open_loop_question": "",
 
-      "public_domain_available": false,
-      "suggested_visual_types": [],
+      "tension_points": [
+        "Lost radio communication",
+        "Massive search effort failed",
+        "No wreckage discovered"
+      ],
+
+      "open_loop_question": "What do you think really happened to Amelia Earhart?",
+
+      "public_domain_available": true,
+      "suggested_visual_types": [
+        "Vintage aircraft recreation",
+        "Ocean aerial shots",
+        "Historical map animations"
+      ],
+
       "sensitive_content_flags": [],
 
-      "status": "pending",
-      "approved_by": "",
-      "approval_date": "",
+      "status": "approved",
+      "approved_by": "Admin",
+      "approval_date": "2026-03-14",
 
-      "seo_keywords": [],
+      "seo_keywords": [
+        "Amelia Earhart disappearance",
+        "unsolved aviation mystery",
+        "missing aircraft 1937",
+        "Pacific Ocean mystery"
+      ],
+
       "content_warnings": []
     }
   ]

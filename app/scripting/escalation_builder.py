@@ -12,24 +12,42 @@ class EscalationBuilder:
     """
 
     @staticmethod
-    def build(case: Dict) -> str:
+    def clean_sentence(text: str) -> str:
         """
-        Construct the escalation paragraph.
+        Remove trailing periods and clean formatting.
+        """
+        return text.strip().rstrip(".")
+
+    @classmethod
+    def build(cls, case: Dict) -> str:
+        """
+        Construct the escalation paragraph with improved narrative flow.
         """
 
         key_events = case.get("key_events", [])
         unresolved = case.get("unresolved_elements", [])
 
-        escalation_sentences = []
+        escalation_parts = []
 
-        # Add key events (limited for pacing)
-        for event in key_events[:2]:
-            escalation_sentences.append(event.strip() + ".")
+        # First key event
+        if key_events:
+            first_event = cls.clean_sentence(key_events[0])
+            escalation_parts.append(first_event + ".")
 
-        # Add unresolved tension points
-        for item in unresolved[:2]:
-            escalation_sentences.append(item.strip() + ".")
+        # Second key event (shorter emphasis)
+        if len(key_events) > 1:
+            second_event = cls.clean_sentence(key_events[1])
+            escalation_parts.append(second_event + ".")
 
-        escalation_block = " ".join(escalation_sentences)
+        # Add unresolved tension
+        if unresolved:
+            first_unresolved = cls.clean_sentence(unresolved[0])
+            escalation_parts.append(first_unresolved + ".")
+
+        if len(unresolved) > 1:
+            second_unresolved = cls.clean_sentence(unresolved[1])
+            escalation_parts.append(second_unresolved + ".")
+
+        escalation_block = " ".join(escalation_parts)
 
         return escalation_block.strip()

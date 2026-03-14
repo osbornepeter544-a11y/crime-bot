@@ -17,17 +17,15 @@ class SetupBuilder:
         Construct the setup paragraph.
         """
 
-        title = case.get("title", "")
         year = case.get("year", "")
         location = case.get("location", "")
         summary = case.get("summary", "").strip()
 
-        # Basic structured setup sentence
+        # More natural introduction structure
         intro_sentence = (
-            f"In {year}, {title} occurred over {location}."
+            f"In {year}, over the {location}, a historic disappearance would unfold."
         )
 
-        # Combine with condensed summary
         setup_block = f"{intro_sentence} {summary}"
 
         return setup_block.strip()
